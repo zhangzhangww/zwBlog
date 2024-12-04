@@ -1,4 +1,4 @@
-import{h as n,_ as p,r as v,o as s,c as e,b as t,e as l,u as d,l as c}from"./index-Crf_WizN.js";const Q=n([{id:1,createtime:"2024-03-01",title:"未来三年，请主动给生活降级",content:` <h1>linux # 时区同步</h1>
+import{h as n,_ as p,r as v,o as s,c as e,b as t,e as l,u as d,l as c}from"./index-DN3XQRAJ.js";const Q=n([{id:1,createtime:"2024-03-01",title:"未来三年，请主动给生活降级",content:` <h1>linux # 时区同步</h1>
                <p>系统时间与现实时间不一致</p>
                 <p>网上的办法也无法快速解决，都是什么乱七八兆的搞法，麻烦得要死</p>
                 <p>快速解决方法</p>
