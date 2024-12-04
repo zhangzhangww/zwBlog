@@ -23,6 +23,28 @@
 	/* 黑夜分割线 */
 }
 
+
+/* 定义根作用域下的变量 */
+:root {
+	--theme-color: #333;
+	--theme-background: #eee;
+  }
+  /* 更改dark类名下变量的取值 */
+  .dark{
+	--theme-color: #eee;
+	--theme-background: #333;
+  }
+  /* 更改pink类名下变量的取值 */
+  .pink{
+	--theme-color: #fff;
+	--theme-background: pink;
+  }
+  
+
+
+
+
+
 @font-face {
     font-family: "HarmonyOS_Sans_SC_Medium";
     src: url(@/assets/fonts/HarmonyOS_Sans_SC_Regular.ttf);
@@ -2833,8 +2855,8 @@ a#mStats {
 .entry-summary p {
 	padding: 0 0 15px;
 	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 2;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	font-size: 13px;
@@ -3239,7 +3261,7 @@ div.nxts {
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.66);
 	position: absolute;
-	opacity: .22;
+	/* opacity: .22; */
 	top: 0;
 	left: 0;
 	-webkit-transition: opacity 0.3s ease-in-out;

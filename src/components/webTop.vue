@@ -1,5 +1,6 @@
 <template>
-    <div class="top-bar">
+   
+    <div class="top-bar" :class="theme">
         <!-- 手机端显示 -->
         <div class="container clearnav secnav">
             <nav class="navbar navbar-inverse navbar-static-top">
@@ -93,7 +94,7 @@
             <!-- logo与名称 -->
             <div class="top-bar-left pull-left navlogo">
                 <a href="https://www.yvii.cn/" class="logo box">
-                    <img src="https://pic.yvii.cn/logo/logo-yv.png" class="logo-light" id="logo-light" alt="乙未极客" />
+                    <img src="@/assets/images/logo1.png" class="logo-light" id="logo-light" alt="乙未极客" />
                     <img src="https://pic.yvii.cn/logo/logo-yv2.png" class="logo-dark d-none" id="logo-dark"
                         alt="乙未极客" />
                     <b class="shan"></b>
@@ -139,7 +140,7 @@
                         </div>
                     </div>
                     <input class="wb-switch wb-no" id="J_themesSwitchBtn" type="checkbox"
-                        onclick="javascript:switchNightMode()">
+                    @click="setTheme('dark')">
                 </div>
             </div>
         </div>
@@ -148,34 +149,23 @@
             <div class="top-bar-left pull-left navs">
                 <nav class="top-bar-navigation">
                     <ul class="top-bar-menu">
-                        <li class="menu-item">
-                            <router-link to="/home" class="top-icon">
-                                <img class="img" src="@/assets/images/icon/gift.svg" alt="">
-                                    首页
+                        <li class="nav-s" v-for="item in menuList" :key="item.id">
+                            <router-link :to="item.path" class="top-icon" activeClass="active">
+                                <img class="img" :src="item.img" alt="">
+                                    {{item.name}}
                             </router-link>
                         </li>
-                        <li class="nav-s">
-                            <router-link to="/navigation" title="生活随笔" class="top-icon">
-                                <img class="img" src="@/assets/images/icon/snowmap.svg" alt="">
-                                导航页面
-                            </router-link>
-                        </li>
-                        <li class="nav-s">
-                            <router-link to="/chat" title="旅行足迹" class="top-icon">
-                                <img class="img" src="@/assets/images/icon/bingjiling.svg" alt="">
-                               对话
-                            </router-link>
-                        </li>
+                       
                         <li class="drop-down">
-                            <a href="https://www.yvii.cn/category/share/" class="top-icon">
+                            <a href="" class="top-icon">
                                 <img class="img" src="@/assets/images/icon/milu.svg" alt="">小工具
                             </a>
                             <ul class="aui-nav-dow">
                                 <li>
-                                    <a href="https://www.yvii.cn/category/vlog/" title="视频分享">文本翻译</a>
+                                    <a href="" title="视频分享">文本翻译</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.yvii.cn/category/app/" title="资源推荐">视频下载</a>
+                                    <a href="" title="资源推荐">视频下载</a>
                                 </li>
                             </ul>
                         </li>
@@ -187,13 +177,13 @@
                             </a>
                             <ul class="aui-nav-dow">
                                 <li>
-                                    <a href="https://www.yvii.cn/talk.html" title="有话要说">有话要说</a>
+                                    <a href="" title="有话要说">有话要说</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.yvii.cn/links.html" title="友情链接">友情链接</a>
+                                    <a href="" title="友情链接">友情链接</a>
                                 </li>
                                 <li>
-                                    <a href="https://www.yvii.cn/about.html" title="关于本站">关于本站</a>
+                                    <a href="" title="关于本站">关于本站</a>
                                 </li>
                             </ul>
                         </li>
@@ -206,12 +196,12 @@
             <div class="top-bar-right pull-right text-right">
                 <div class="top-admin">
                     &nbsp;&nbsp;
-                    <a href="https://www.yvii.cn/travellings.html" target="blank" class="top-icon">
+                    <a href="" target="blank" class="top-icon">
                         <img class="img" src="@/assets/images/icon/qiqiu.svg" alt="">
                         开往
                     </a>
                     &nbsp;&nbsp;
-                    <a href="https://www.yvii.cn/forever.html" target="blank" class="top-icon">
+                    <a href="" target="blank" class="top-icon">
                         <img class="img" src="@/assets/images/icon/tree.svg" alt="">
                         虫洞
                     </a>
@@ -237,15 +227,15 @@
                                     <div class="info">
                                         <div class="info-thumb">
                                             <i class="thumb"
-                                                style="background-image:url(https://www.yvii.cn/img/favicon2.png);"></i>
+                                                style="background-image:url(https://api.yviii.com/bing/uhd_302.php);"></i>
                                         </div>
                                         <h2 class="user-name">您还未登录</h2>
                                         <h4 class="user-info">登录体验更多功能</h4>
-                                        <a href="https://www.yvii.cn/logon.html"
+                                        <router-link to="/login"
                                             class="modal-open btn btn-orange info-btn">
                                             <i class="ri-login-circle-line ri-lg"></i>
                                             立即登录
-                                        </a>
+                                        </router-link>
                                     </div>
                                 </div>
 
@@ -253,7 +243,7 @@
                         </span>
                     </div>
                     <input class="wb-switch" id="J_themesSwitchBtn" type="checkbox"
-                        onclick="javascript:switchNightMode()">
+                    @click="setTheme(theme)">
                 </div>
             </div>
         </div>
@@ -261,10 +251,33 @@
     </div>
 </template>
 
-<script>
+<script setup>
+const menuList= ref([
+    {name:'首页',path:'/home',img:'/src/assets/images/icon/gift.svg'},
+    {name:'导航页面',path:'/navigation',img:'/src/assets/images/icon/snowmap.svg'},
+    {name:'对话',path:'/chat',img:'/src/assets/images/icon/bingjiling.svg'}
+   
+])
+const theme=ref('pink')
+const setTheme = (theme1) => {
+    if (theme1 === 'dark') {
+        theme.value = 'pink'
+    } 
+    if (theme1 === 'pink') {
+        theme.value = 'dark'
+    }
+}
 </script>
 
 <style scoped>
+.active{
+    color: var(--theme);
+}
+.logo-light{
+    /* width: 176px; */
+    height: 58px;
+    object-fit: cover;
+}
 
 .top-icon {
     display: flex;
