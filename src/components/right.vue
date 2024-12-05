@@ -182,7 +182,6 @@ const newsList = ref([])
 const newsPage = ref(0)
 axios.get('https://dabenshi.cn/other/api/hot.php?type=toutiaoHot').then(res => {
     newsList.value = res.data.data
-    console.log(res.data.data)
 })
 const changeNews = () => {
     if (newsPage.value < newsList.value.length) {

@@ -34,6 +34,11 @@ const routes = [
 				name: 'expression',
 				component: () => import('@/views/expression.vue'),
 			},
+			{
+				path: '/bullet',
+				name: 'bullet',
+				component: () => import('@/views/bullet.vue'),
+			},
 		],
 	},
 	{

@@ -5,7 +5,7 @@
 			<header class="page-header">
 				<h1 class="page-title">
 					<span>表情包合集</span>
-					<em class="num">{{expressionList.length}}</em>
+					<!-- <em class="num">{{expressionList.length}}</em> -->
 				</h1>
 				<div class="page-des">
 					<p>点击表情包可以复制其地址。</p>
