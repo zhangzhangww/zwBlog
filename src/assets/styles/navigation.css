@@ -1,6 +1,6 @@
 
 @media screen and (min-width: 1400px)and (max-width: 1600px) {
-  
+
     .link {
       .link-content {
         grid-template-columns: repeat(4, 1fr);
@@ -20,11 +20,24 @@
   
   @media screen and (max-width: 800px) {
     .navigation-ui{
-      margin-top: 60px;
+      .mulu{
+        display: none;
+      }
+      .nav-content {
+        margin-top: 40px;
+        }
     }
     .link {
       .link-content {
         grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  @media screen and (min-width: 800px) {
+    .navigation-ui{
+      width: 1400px;
+      .nav-content {
+      margin-top: 54px;
       }
     }
   }
@@ -38,10 +51,11 @@
   }
   
   .navigation-ui {
-  
+  margin: auto;
     /* height: calc(100vh - 107px); */
     background-color: rgb(246, 248, 251);
-    padding:0 20px 20px;
+    padding:0px 20px 20px;
+   
     overflow: auto;
    
     .banner {
@@ -61,7 +75,6 @@
   
     .nav-content {
      
-      margin-top: 20px;
       width: 100%;
       /* height: calc(100% - 170px ); */
       display: flex;
@@ -78,8 +91,9 @@
       .mulu1 {
         position: fixed;
         padding: 20px 0;
-        top: 300px;
+        top: 127px;
         min-width: 200px;
+        /* min-height: 600px; */
         background-color:white;
         border-radius: 8px;
         box-sizing: border-box;
@@ -111,7 +125,7 @@
       .link {
        
         h2{
-          margin-bottom: 14px;
+          margin: 14px 0;
           font-size: 16px;
         }
         
@@ -130,7 +144,7 @@
           grid-template-columns: repeat(3, 1fr);
           grid-row-gap: 15px;
           grid-column-gap: 15px;
-          margin-bottom: 40px;
+          margin-bottom: .5rem;
           
           
           .link-item {

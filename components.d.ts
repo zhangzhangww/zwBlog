@@ -10,6 +10,7 @@ declare module 'vue' {
     Right: typeof import('./src/components/right.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ToTop: typeof import('./src/components/toTop.vue')['default']
     WebTop: typeof import('./src/components/webTop.vue')['default']
   }
 }

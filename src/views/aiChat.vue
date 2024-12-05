@@ -10,13 +10,16 @@
                     <input type="text" placeholder="输入水果帮你测热量" v-model="message"> <button @click="send">查看热量</button> <button @click="chat">对话</button> <button @click="eng">翻译为英文</button>
                 </div>
             </div>
-            <div class="content" >
+            <div class="null" v-if="!reply.length>0">
+                <img src='https://bu.dusays.com/2021/01/15/6ed1dad31d260.gif' alt='25'>
+                快去搜索吧
+            </div>
+            <div class="content" v-if="reply.length>0">
                 <div class="content1" v-for="item,index in reply" :key="index">
                     
                     <!-- <p>名称：{{ item.name }}</p> -->
                     <p>{{ item.title }}</p>
                     <p>{{ item.heat }}</p>
-                   
                 </div>
                 {{ ceshi.target }}
                 {{ ceshi }}
@@ -62,6 +65,20 @@ const chat=()=>{
 </script>
 
 <style scoped>
+.null{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%,-50%);
+}
+img{
+    width: 100px;
+    height: 100px;
+}
 .wenti{
    display: flex;
    justify-content: center;
@@ -98,9 +115,10 @@ button{
     border: 1px solid #999;
 }
 .box{
-	width: 100%;
+	width: 1400px;
 	height: 800px;
 	background-color: #fff;
+    margin-top: 60px;
 }
 .message{
    

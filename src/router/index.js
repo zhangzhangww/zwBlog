@@ -29,6 +29,11 @@ const routes = [
 				name: 'chat',
 				component: () => import('@/views/aiChat.vue'),
 			},
+			{
+				path: '/expression',
+				name: 'expression',
+				component: () => import('@/views/expression.vue'),
+			},
 		],
 	},
 	{

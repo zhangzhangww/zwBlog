@@ -1,12 +1,7 @@
 <template>
-  <div class="navigation-ui">
-    <div class="banner"  @mouseenter="onMouseEnter" @mousemove="onMouseMove" @mouseleave="onMouseLeave">
-      <div class="png" :style="pngStyle">
-        <img src="../assets/images/nav/castalia.png" alt="Background">
-      </div>
-      <p :style="textStyle">不止设计</p>
-    </div>
-    <div class="nav-content">
+  <div class="navigation-ui ">
+    
+    <div class="nav-content ">
       <div class="mulu">
         <div class="mulu1 " >
           <div v-for="(item,index) in navList" :key="index">
@@ -19,7 +14,12 @@
         </div>
       </div>
       <div class="link-box">
-        
+        <div class="banner"  @mouseenter="onMouseEnter" @mousemove="onMouseMove" @mouseleave="onMouseLeave">
+      <div class="png" :style="pngStyle">
+        <img src="../assets/images/nav/castalia.png" alt="Background">
+      </div>
+      <p :style="textStyle">不止设计</p>
+    </div>
           <div class="link " v-for="(content,index) in navList" :key="content.name" >
                 <h2 :id="index">{{content.title}}</h2>
                 <div class="link-content">
@@ -47,6 +47,7 @@ const clickNav = (index, item) => {
 		navIndex.value = index
     const element = document.getElementById(index);
       element.scrollIntoView({ behavior: 'smooth' });
+      
 	}
 
 

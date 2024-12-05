@@ -1,20 +1,14 @@
 <template>
 	<webTop></webTop>
-	<div class="container1">
-		
-		<router-view></router-view>
-	</div>
+	<router-view></router-view>
+	<toTop></toTop>
 </template>
 
 <script>
 import webTop from '../components/webTop.vue';
+import toTop from '../components/toTop.vue';
 </script>
 
 <style scoped>
-	.container1{
-		margin: auto;
-		width: 1400px;
-		padding-top: 127px;
-	
-	}
+
 </style>

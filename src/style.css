@@ -3,6 +3,7 @@
 /* 复位css */
 
 :root {
+	/* --theme:#F27875; */
 	--theme:#2299DD;
 	/* 主题色 */
 	--bg-body: #f6f8fb;
@@ -21,14 +22,15 @@
 	/* 2号字体颜色 */
 	--night-border-light: #3c4560;
 	/* 黑夜分割线 */
+	--theme-color: #333;
+	--theme-background: #eee;
+	/* 圆角 */
+	--border-radius: 8px;
 }
 
 
 /* 定义根作用域下的变量 */
-:root {
-	--theme-color: #333;
-	--theme-background: #eee;
-  }
+
   /* 更改dark类名下变量的取值 */
   .dark{
 	--theme-color: #eee;
@@ -273,6 +275,9 @@ dd {
 	margin: 0;
 	padding: 0;
 }
+ul, ol {
+    list-style-type: none;
+}
 
 /*css3滑动显示图片*/
 
@@ -376,13 +381,14 @@ dd {
 }
 
 .news-header {
-	height: 90px;
+	height: 72px;
+	/* height: 90px; */
 	background: 0 0/100% 100% url(../spimes/src/images/News_bg.png) no-repeat;
 }
 
 .news-header img {
 	width: 39px;
-	margin-left: 18px;
+	margin-left: 12px;
 	margin-top: 10px;
 }
 
@@ -974,6 +980,7 @@ hr {
 	}
 
 	.site-main {
+		/* padding-top: 76px !important; */
 		padding-top: 40px !important;
 	}
 
@@ -1432,6 +1439,7 @@ hr {
 }
 
 .site-main {
+	/* padding-top: 129px; */
 	padding-top: 75px;
 }
 
@@ -5225,7 +5233,7 @@ h6 {
 	border: none;
 	background: none;
 	position: absolute;
-	left: 70px;
+	left: 80px;
 	top: 18px;
 	padding: 4px 0 4px 4px;
 }
@@ -6932,7 +6940,7 @@ a:hover .overlay-1 {
 .page-title span {
 	display: inline-block;
 	padding-right: 10px;
-	background: #fff;
+	/* background: #fff; */
 	position: relative;
 	z-index: 2;
 	font-weight: 600;
@@ -9880,7 +9888,8 @@ html input[disabled] {
 	z-index: 900;
 	bottom: 0px;
 	top: 0px;
-	left: -50%;
+	/* left: -50%; */
+	left: -4px;
 	margin: 0;
 	padding: 0px;
 	width: 77%;

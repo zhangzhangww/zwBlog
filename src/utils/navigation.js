@@ -5,10 +5,10 @@
         icon:'/src/assets/images/nav/isux.png',
         children:[
           {
-          name:'lkonate',
-          description:'免费，样式统一，可调大小、粗细、颜色等参数',
-          image:'/src/assets/images/nav/ikonate.jpg',
-          url:'http://www.baidu.com'
+          name:'表情包',
+          description:'可以快速获取表情包的链接',
+          image:'https://bu.dusays.com/2021/01/15/a6068f78ff2b8.gif',
+          url:'https://emotion.xiaokang.me/#/emotion/HONKAI3'
           },
     
         ]
