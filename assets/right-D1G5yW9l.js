@@ -1,4 +1,4 @@
-import{p as w,_ as F,r as c,b as i,c as e,g as t,u as s,m as p,F as m,i as A,t as r,k as u,l as f}from"./index-5TeZybvd.js";import{a as y}from"./axios-DXsv3KKR.js";const T=w([{id:1,createtime:"2024-03-01",title:"未来三年，请主动给生活降级",content:` <h1>linux # 时区同步</h1>
+import{p as w,_ as F,r as c,b as i,c as e,g as t,u as s,m as p,F as m,i as A,t as r,k as u,l as f}from"./index-q6kb4kus.js";import{a as y}from"./axios-DXsv3KKR.js";const T=w([{id:1,createtime:"2024-03-01",title:"未来三年，请主动给生活降级",content:` <h1>linux # 时区同步</h1>
                <p>系统时间与现实时间不一致</p>
                 <p>网上的办法也无法快速解决，都是什么乱七八兆的搞法，麻烦得要死</p>
                 <p>快速解决方法</p>
