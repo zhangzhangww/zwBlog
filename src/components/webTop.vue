@@ -46,36 +46,12 @@
                                         </ul>
                                     </li>
                                     
-                                    <li class="menu-item">
-                                        <a>
-                                            <img class="img" src="@/assets/images/icon/snow.svg" alt="">
-                                            其他
-                                            <div class="dropdown-sub-menu">
-                                                <span class="ri-arrow-down-s-line ri-lg"></span>
-                                            </div>
-                                        </a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <a href="" title="有话要说">有话要说</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="" title="友情链接">友情链接</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <a href="" title="关于本站">关于本站</a>
-                                            </li>
-                                        </ul>
-                                        <a href="" target="blank"
-                                            class="a-no-bottom">
-                                            <img class="img" src="@/assets/images/icon/snow.svg" alt="">
-                                            开往
-                                        </a>
-                                    </li>
+                                   
                                     <li>
-                                        <a href="" target="blank" class="a-no-bottom">
+                                        <router-link to="/family"  class="a-no-bottom">
                                             <img class="img" src="@/assets/images/icon/snow.svg" alt="">
-                                            虫洞
-                                        </a>
+                                            我们
+                                        </router-link>
                                     </li>
                                 </ul>
                             </div>
@@ -148,9 +124,9 @@
                             </li>
 
                             <li class="drop-down">
-                                <a href="" class="top-icon">
-                                    <img class="img" src="@/assets/images/icon/milu.svg" alt="">小工具
-                                </a>
+                                <div class="top-icon" style="line-height: 50px;">
+                                        <img class="img" src="@/assets/images/icon/milu.svg" alt="">小工具
+                                </div>
                                 <ul class="aui-nav-dow">
                                     <li>
                                         <router-link to="/chat" title="热量">查热量</router-link>
@@ -191,19 +167,24 @@
                 <div class="top-bar-right pull-right text-right">
                     <div class="top-admin">
                         &nbsp;&nbsp;
-                        <a href="" target="blank" class="top-icon">
+                        <!-- <a href="" target="blank" class="top-icon">
                             <img class="img" src="@/assets/images/icon/qiqiu.svg" alt="">
                             开往
-                        </a>
+                        </a> -->
                         &nbsp;&nbsp;
-                        <a href="" target="blank" class="top-icon">
-                            <img class="img" src="@/assets/images/icon/tree.svg" alt="">
-                            虫洞
-                        </a>
+                        <router-link to="/family"  class="top-icon">
+                                            <img class="img" src="@/assets/images/icon/tree.svg" alt="">
+                                            我们
+                                        </router-link>
                         &nbsp;&nbsp;
-                        <a href="javascript:;" id="mStats" class="stats_click top-icon">
+                        <router-link to="/about"  class="top-icon">
                             <img class="img" src="@/assets/images/icon/wazi.svg" alt="">
-                            统计
+                                           关于
+                                        </router-link>
+                        &nbsp;&nbsp;
+                        <!-- <a href="javascript:;" id="mStats" class="stats_click top-icon">
+                            <img class="img" src="@/assets/images/icon/wazi.svg" alt="">
+                            关于
                             <div class="stats">
                                 <ul>
                                     <li>文章总数：231 篇</li>
@@ -212,7 +193,7 @@
                                     <li>最后更新：4天前</li>
                                 </ul>
                             </div>
-                        </a>
+                        </a> -->
                         <div class="login avt_tl top-icon">
                             <img class="img" src="@/assets/images/icon/bear.svg" alt="">
                             <span>
@@ -224,8 +205,7 @@
                                                 <i class="thumb"
                                                     style="background-image:url(https://api.yviii.com/bing/uhd_302.php);"></i>
                                             </div>
-                                            <h2 class="user-name">您还未登录</h2>
-                                            <h4 class="user-info">登录体验更多功能</h4>
+                                            <!-- <h4 class="user-info">登录体验更多功能</h4> -->
                                             <router-link to="/login" class="modal-open btn btn-orange info-btn">
                                                 <i class="ri-login-circle-line ri-lg"></i>
                                                 立即登录
@@ -249,10 +229,10 @@
 import { ref } from 'vue';
 
 const menuList = ref([
-    { name: '首页', path: '/home', img: '/zwBlog/src/assets/images/icon/gift.svg' },
-    { name: '导航页', path: '/navigation', img: '/zwBlog/src/assets/images/icon/snowmap.svg' },
-    { name: '表情包', path: '/expression', img: '/zwBlog/src/assets/images/icon/bingjiling.svg' },
-    { name: '弹幕墙', path: '/bullet', img: '/zwBlog/src/assets/images/icon/wancan.svg' },
+    { name: '首页', path: '/home', img: '/zwBlog/assets/images/icon/gift.svg' },
+    { name: '导航页', path: '/navigation', img: '/zwBlog/assets/images/icon/snowmap.svg' },
+    { name: '表情包', path: '/expression', img: '/zwBlog/assets/images/icon/bingjiling.svg' },
+    { name: '弹幕墙', path: '/bullet', img: '/zwBlog/assets/images/icon/wancan.svg' },
     // {name:'对话',path:'/chat',img:'/src/assets/images/icon/bingjiling.svg'}
 ])
 const isShow=ref(false)

@@ -39,6 +39,16 @@ const routes = [
 				name: 'bullet',
 				component: () => import('@/views/bullet.vue'),
 			},
+			{
+				path: '/family',
+				name: 'family',
+				component: () => import('@/views/family.vue'),
+			},
+			{
+				path: '/about',
+				name: 'about',
+				component: () => import('@/views/about.vue'),
+			},
 		],
 	},
 	{
