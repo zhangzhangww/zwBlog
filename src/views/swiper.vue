@@ -3,7 +3,7 @@
     <p> Hello! 👋🏾 Can I have a triple connection?</p>
   </div>
   <!-- 视频 -->
-  <div class="img-list img-wrapper" v-if="none">
+  <!-- <div class="img-list img-wrapper" v-if="none">
     <div v-for="(item, navIndex) in urlList" :key="navIndex" class="img-box" style="margin-left: 40%;">
 
       <video autoplay loop controls 
@@ -12,7 +12,7 @@
       </video>
     </div>
 
-  </div>
+  </div> -->
   <div id="banner" v-if="!none">
     <div class="img-list img-wrapper" >
       <div v-for="(item, navIndex) in imgBoxes" :key="navIndex" class="img-box">
