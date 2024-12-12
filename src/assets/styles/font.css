@@ -2,3 +2,10 @@
     font-family: "HarmonyOS_Sans_SC_Medium";
     src: url(@/assets/fonts/HarmonyOS_Sans_Medium.ttf);
 }
+
+@font-face {
+    font-family: Millik;
+    font-weight: 700;
+    src: url(@/asset/fonts/Millik.c3f91cb.ttf) format("truetype");
+    text-rendering: optimizeLegibility;
+  }

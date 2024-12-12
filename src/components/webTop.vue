@@ -1,5 +1,5 @@
 <template>
-        <div class="site-main spimes-container">
+    <div class="site-main spimes-container">
         <div class="top-bar" :class="theme">
             <!-- 手机端显示 -->
             <div class="container clearnav secnav">
@@ -16,22 +16,41 @@
                             </div>
                         </div>
                         <!-- 手机端菜单内容 -->
-                        <div id="navbar" class="  "  :class="isShow?' navbar-collapse':'collapse sidebar-offcanvas'">
+                        <div id="navbar"  :class="isShow ? ' navbar-collapse' : 'collapse sidebar-offcanvas'">
                             <input class="wb-switch wb-yes" id="J_themesSwitchBtn" type="checkbox"
                                 onclick="javascript:switchNightMode()">
                             <div class="mobile-sidebar-column">
                                 <ul class="mobile-sidebar-menu ultop">
-                                    <li class="menu-item" v-for="item in menuList" :key="item.id" @click="showMenu">
-                                        <router-link :to="item.path" class="top-icon" activeClass="active">
-                                            <img class="img" :src="item.img" alt="">
-                                            {{ item.name }}
-                                        </router-link>
-                                    </li>
-                                  
+                                    <li class="nav-s" >
+                                <router-link to="/home" class="top-icon" activeClass="active" @click="showMenu">
+                                    <img class="img" src="@/assets/images/icon/gift.svg" alt="">
+                                    首页
+                                </router-link>
+                            </li>
+                            <li class="nav-s" >
+                                <router-link to="/navigation" class="top-icon" activeClass="active" @click="showMenu">
+                                    <img class="img" src="@/assets/images/icon/snowmap.svg" alt="">
+                                    导航页
+                                </router-link>
+                            </li>
+                            <li class="nav-s" >
+                                <router-link to="/expression" class="top-icon" activeClass="active" @click="showMenu">
+                                    <img class="img" src="@/assets/images/icon/bingjiling.svg" alt="">
+                                    表情包
+                                </router-link>
+                            </li>
+                            <li class="nav-s" >
+                                <router-link to="/bullet" class="top-icon" activeClass="active" @click="showMenu">
+                                    <img class="img" src="@/assets/images/icon/wancan.svg" alt="">
+                                    弹幕墙
+                                </router-link>
+                            </li>
+
+
                                     <li class="menu-item">
                                         <a>
                                             <img class="img" src="@/assets/images/icon/milu.svg" alt="">
-                                           小工具
+                                            小工具
                                             <div class="dropdown-sub-menu">
                                                 <span class="ri-arrow-down-s-line ri-lg"></span>
                                             </div>
@@ -45,10 +64,10 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    
-                                   
+
+
                                     <li>
-                                        <router-link to="/family"  class="a-no-bottom">
+                                        <router-link to="/family" class="a-no-bottom">
                                             <img class="img" src="@/assets/images/icon/snow.svg" alt="">
                                             我们
                                         </router-link>
@@ -68,7 +87,7 @@
                         </router-link>
                     </div>
                     <!-- 搜索功能 -->
-                    <div class=" clearfix" :class="isSeacher?'':'search-warp'">
+                    <div class=" clearfix" :class="isSeacher ? '' : 'search-warp'">
                         <form method="get" action="">
                             <div class="search-area">
                                 <input class="search-input" placeholder="搜索感兴趣的知识和文章" type="text" name="s"
@@ -83,7 +102,7 @@
                     <!-- 右侧搜索登录菜单 -->
                     <div class="top-bar-right pull-right text-right mobs">
                         <div class="top-admin">
-                            <a href="javascript:;" id="soStats" class="sostats_click"  @click="showSeacher">
+                            <a href="javascript:;" id="soStats" class="sostats_click" @click="showSeacher">
                                 <i id="soico" class="ri-search-2-line ri-lg"></i>
                                 搜索
                             </a>
@@ -93,7 +112,8 @@
                             </router-link>
                             <div class="navbar-search socollapse sostats" id="navbar-search" style="">
                                 <div class="container">
-                                    <form method="get" role="search" id="searchform" class="searchform shadow" action="">
+                                    <form method="get" role="search" id="searchform" class="searchform shadow"
+                                        action="">
                                         <div class="input-group">
                                             <input type="text" name="s" id="s" placeholder="请输入搜索关键词并按回车键…"
                                                 class="form-control" required="">
@@ -106,7 +126,8 @@
                                     </form>
                                 </div>
                             </div>
-                            <input class="wb-switch wb-no" id="J_themesSwitchBtn" type="checkbox" @click="setTheme('dark')">
+                            <input class="wb-switch wb-no" id="J_themesSwitchBtn" type="checkbox"
+                                @click="setTheme('dark')">
                         </div>
                     </div>
                 </div>
@@ -116,16 +137,34 @@
                 <div class="top-bar-left pull-left navs">
                     <nav class="top-bar-navigation">
                         <ul class="top-bar-menu">
-                            <li class="nav-s" v-for="item in menuList" :key="item.id">
-                                <router-link :to="item.path" class="top-icon" activeClass="active">
-                                    <img class="img" :src="item.img" alt="">
-                                    {{ item.name }}
+                            <li class="nav-s" >
+                                <router-link to="/home" class="top-icon" activeClass="active">
+                                    <img class="img" src="@/assets/images/icon/gift.svg" alt="">
+                                    首页
+                                </router-link>
+                            </li>
+                            <li class="nav-s" >
+                                <router-link to="/navigation" class="top-icon" activeClass="active">
+                                    <img class="img" src="@/assets/images/icon/snowmap.svg" alt="">
+                                    导航页
+                                </router-link>
+                            </li>
+                            <li class="nav-s" >
+                                <router-link to="/expression" class="top-icon" activeClass="active">
+                                    <img class="img" src="@/assets/images/icon/bingjiling.svg" alt="">
+                                    表情包
+                                </router-link>
+                            </li>
+                            <li class="nav-s" >
+                                <router-link to="/bullet" class="top-icon" activeClass="active">
+                                    <img class="img" src="@/assets/images/icon/wancan.svg" alt="">
+                                    弹幕墙
                                 </router-link>
                             </li>
 
                             <li class="drop-down">
                                 <div class="top-icon" style="line-height: 50px;">
-                                        <img class="img" src="@/assets/images/icon/milu.svg" alt="">小工具
+                                    <img class="img" src="@/assets/images/icon/milu.svg" alt="">小工具
                                 </div>
                                 <ul class="aui-nav-dow">
                                     <li>
@@ -172,15 +211,20 @@
                             开往
                         </a> -->
                         &nbsp;&nbsp;
-                        <router-link to="/family"  class="top-icon">
-                                            <img class="img" src="@/assets/images/icon/tree.svg" alt="">
-                                            我们
-                                        </router-link>
+                        <router-link to="/swiper" class="top-icon">
+                            <img class="img" src="@/assets/images/icon/mei.svg" alt="">
+                            照片墙
+                        </router-link>
                         &nbsp;&nbsp;
-                        <router-link to="/about"  class="top-icon">
+                        <router-link to="/family" class="top-icon">
+                            <img class="img" src="@/assets/images/icon/tree.svg" alt="">
+                            我们
+                        </router-link>
+                        &nbsp;&nbsp;
+                        <router-link to="/about" class="top-icon">
                             <img class="img" src="@/assets/images/icon/wazi.svg" alt="">
-                                           关于
-                                        </router-link>
+                            关于
+                        </router-link>
                         &nbsp;&nbsp;
                         <!-- <a href="javascript:;" id="mStats" class="stats_click top-icon">
                             <img class="img" src="@/assets/images/icon/wazi.svg" alt="">
@@ -228,15 +272,8 @@
 <script setup>
 import { ref } from 'vue';
 
-const menuList = ref([
-    { name: '首页', path: '/home', img: '/zwBlog/assets/images/icon/gift.svg' },
-    { name: '导航页', path: '/navigation', img: '/zwBlog/assets/images/icon/snowmap.svg' },
-    { name: '表情包', path: '/expression', img: '/zwBlog/assets/images/icon/bingjiling.svg' },
-    { name: '弹幕墙', path: '/bullet', img: '/zwBlog/assets/images/icon/wancan.svg' },
-    // {name:'对话',path:'/chat',img:'/src/assets/images/icon/bingjiling.svg'}
-])
-const isShow=ref(false)
-const isSeacher=ref(false)
+const isShow = ref(false)
+const isSeacher = ref(false)
 const theme = ref('pink')
 const showMenu = () => {
     isShow.value = !isShow.value
@@ -257,14 +294,13 @@ const setTheme = (theme1) => {
 // 计算距离顶部的距离
 const scrollDistance = ref(0);
 window.addEventListener('scroll', () => {
-        scrollDistance.value = document.documentElement.scrollTop || document.body.scrollTop;
+    scrollDistance.value = document.documentElement.scrollTop || document.body.scrollTop;
+    console.log(scrollDistance.value)
 
 })
 </script>
 
 <style scoped>
-
-
 .active {
     color: var(--theme);
 }

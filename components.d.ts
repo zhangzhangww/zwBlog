@@ -7,9 +7,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ElButton: typeof import('element-plus/es')['ElButton']
+    ElCarousel: typeof import('element-plus/es')['ElCarousel']
+    ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     Right: typeof import('./src/components/right.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Swiper: typeof import('./src/components/swiper.vue')['default']
+    Test: typeof import('./src/components/test.vue')['default']
     ToTop: typeof import('./src/components/toTop.vue')['default']
     WebTop: typeof import('./src/components/webTop.vue')['default']
   }

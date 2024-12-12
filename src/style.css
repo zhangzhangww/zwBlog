@@ -1,5 +1,8 @@
 /** * Theme Name: spimes */
-
+#app {
+    height: 100vh;
+    overflow: auto;
+}
 /* 复位css */
 
 :root {
@@ -26,6 +29,12 @@
 	--theme-background: #eee;
 	/* 圆角 */
 	--border-radius: 8px;
+	/* 阴影 */
+	--box-shodow: 0px 0px 20px -5px rgba(158, 158, 158, 0.22);
+
+	--post-spacing: 1.78vw;
+  --post-size: 25vw;
+  --mask-size: 100vw;
 }
 
 
@@ -51,6 +60,12 @@
     font-family: "HarmonyOS_Sans_SC_Medium";
     src: url(@/assets/fonts/HarmonyOS_Sans_SC_Regular.ttf);
 }
+@font-face {
+	font-family: Millik;
+	font-weight: 700;
+	src: url(@/assets/fonts/Millik.c3f91cb.ttf) format("truetype");
+	text-rendering: optimizeLegibility;
+  }
 
 
 
@@ -109,10 +124,13 @@ p {
 }
 
 body {
-	background-color: var(--bg-body);
 	line-height: 1.8;
 	color: var(--color-title);
+	background: url(./assets/images/grid.svg) repeat;
+	background-color: var(--bg-body);
+	background-size: 300px 300px;
 }
+
 
 h3 {
 	font-size: 18px;

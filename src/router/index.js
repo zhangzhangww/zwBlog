@@ -49,6 +49,12 @@ const routes = [
 				name: 'about',
 				component: () => import('@/views/about.vue'),
 			},
+			{
+				path: '/swiper',
+				name: 'swiper',
+				component: () => import('@/views/swiper.vue'),
+			},
+			
 		],
 	},
 	{

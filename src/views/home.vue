@@ -10,21 +10,21 @@
                         <div class="sp-slideshow sp-showno">
                             <div class="sp_index__banner">
                                 <div class="swiper-container">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide" v-for="item in 2" :key="item">
+                                    <div class="swiper-wrapper" >
+                                        <div class="swiper-slide" v-for="item,index in count1" :key="item" :style="`transform: translate(${trans}%);`" style="transition: all 0.5s ease 0s;">
                                             <a target="_blank" class="item block-fea small-slider-img" href="https://blog.csdn.net/aaaa_aaab/article/details/140944939?spm=1001.2014.3001.5502"
                                                 style="background-image: url(https://api.yviii.com/img/style);">
                                                 <div class="overlay-1"></div>
                                                 <div class="title">
                                                     <span class="badge arc_v2">推荐</span>
-                                                   解决npm安装慢问题
+                                                   解决npm安装慢问题{{ index }}
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                     <div class="swiper-pagination"></div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next" @click="banner(1)"></div>
+                                    <div class="swiper-button-prev" @click="banner(-1)"></div>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,31 @@
 import articleList from '@/utils/article.js';
 import articleList1 from '../utils/ceshi';
 import Right from '../components/right.vue';
-
+import { ref } from 'vue';
+const trans=ref(0)
+const count=ref(0)
+const count1=ref(3)
+const banner=(val)=>{
+    
+    if(val===1){
+        count.value++
+        console.log(count1.value)
+        if(count.value<=count1.value-1){
+            trans.value-=100
+        }else{
+            count.value=0
+            trans.value=0
+        }
+    }else if(val===-1){
+        count.value--
+        trans.value+=100
+        if(count.value<=0){
+            trans.value=0
+            count.value=0
+        }
+       
+    }
+}
 
 </script>
 
@@ -104,7 +128,7 @@ import Right from '../components/right.vue';
 }
  }
 .box-style {
-    box-shadow: 0px 0px 20px -5px rgba(158, 158, 158, 0.22);
+    box-shadow: var(--box-shodow);
     border-radius: var(--border-radius);
 }
 
