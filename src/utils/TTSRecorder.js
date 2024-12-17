@@ -9,7 +9,7 @@ function getWebsocketUrl() {
     var apiKey = API_KEY
     var apiSecret = API_SECRET
     // var url = 'ws://spark-api.xf-yun.com/v3.1/chat'
-    var url = 'ws://spark-api.xf-yun.com/v1.1/chat'
+    var url = 'wss://spark-api.xf-yun.com/v1.1/chat'
     var host = location.host
     var date = new Date().toGMTString()
     var algorithm = 'hmac-sha256'

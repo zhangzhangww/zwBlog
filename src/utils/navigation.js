@@ -2,7 +2,7 @@
     const navList=reactive([
         {
         title:'我的',
-        icon:'/zwBlog/assets/images/nav/isux.png',
+        icon:'/assets/images/nav/isux.png',
         children:[
           {
           name:'表情包',
@@ -14,13 +14,13 @@
         ]
         },
         {
-        title:'测试',
-        icon:'/zwBlog/assets/images/nav/logonews.png',
+        title:'百度',
+        icon:'/assets/images/nav/logonews.png',
         children:[
           {
           name:'lkonate',
-          description:'免费，样式统一，可调大小、粗细、颜色等参数',
-          image:'https://api.yviii.com/ico/get.php?url=http://www.baidu.com',
+          description:'搜索引擎',
+          image:'',
           url:'http://www.baidu.com'
           },
     
@@ -29,7 +29,7 @@
        
         {
         title:'API接口',
-        icon:'/zwBlog/assets/images/nav/iconpark.jpg',
+        icon:'/assets/images/nav/iconpark.jpg',
         children:[
           {
           name:'随机视频',
@@ -73,48 +73,43 @@
           image:'',
           url:'https://api.52vmy.cn/'
           },
-          {
-          name:'遇见API合集',
-          description:'各类api',
-          image:'',
-          url:'https://api.yujn.cn/'
-          },
+   
     
         ]
         },
         {
         title:'icon',
-        icon:'/zwBlog/assets/images/nav/iconfont.png',
+        icon:'/assets/images/nav/iconfont.png',
         children:[
         {
           "name": "Iconfont",
           "description": "免费，中文，图标数量丰富，包含插画资源",
           "url": "https://www.iconfont.cn",
-          "image": "/zwBlog/assets/images/nav/iconfont.png"
+          "image": ""
         },
         {
           "name": "Ikonate",
           "description": "免费，样式统一，可调大小、粗细、颜色等参数",
           "url": "https://ikonate.com",
-          "image": "/zwBlog/assets/images/nav/ikonate.jpg"
+          "image": ""
         },
         {
           "name": "IconPark",
           "description": "免费，规范、统一、多风格切换",
           "url": "https://iconpark.oceanengine.com/home",
-          "image": "/zwBlog/assets/images/nav/iconpark.jpg"
+          "image": ""
         },
         {
           "name": "ICONS8",
           "description": "多风格",
           "url": "https://icons8.com",
-          "image": "/zwBlog/assets/images/nav/icons8.jpg"
+          "image": ""
         },
         {
           "name": "seeklogo",
           "description": "500000+ 个品牌 logo 图片，包含 png 和矢量格式",
           "url": "https://seeklogo.com",
-          "image": "/zwBlog/assets/images/nav/seeklogo.png"
+          "image": ""
         },
         {
           "name": "Fey's logo database",
@@ -126,43 +121,43 @@
           "name": "ICONFINDER",
           "description": "类型丰富的图标库",
           "url": "https://www.iconfinder.com",
-          "image": "/zwBlog/assets/images/nav/iconfinder.jpg"
+          "image": ""
         },
         {
           "name": "LOGONEWS",
           "description": "专注LOGO新闻和品牌设计咨询报道",
           "url": "https://www.logonews.cn",
-          "image": "/zwBlog/assets/images/nav/logonews.png"
+          "image": ""
         },
         {
           "name": "Logoipsum",
           "description": "多种风格的LOGO占位符",
           "url": "https://logoipsum.com",
-          "image": "/zwBlog/assets/images/nav/logoipsum.svg"
+          "image": ""
         },
         {
           "name": "Iconoir",
           "description": "免费，线性图标",
           "url": "https://iconoir.com/",
-          "image": "/zwBlog/assets/images/nav/iconoir.svg"
+          "image": ""
         },
         {
           "name": "Logo Design Love",
           "description": "关于LOGO设计的资料、书籍",
           "url": "https://www.logodesignlove.com",
-          "image": "/zwBlog/assets/images/nav/logodesignlove.png"
+          "image": ""
         },
         {
           "name": "macOS Icon Gallery",
           "description": "Mac 应用图标库",
           "url": "https://www.macosicongallery.com/",
-          "image": "/zwBlog/assets/images/nav/icon-gallery.png"
+          "image": ""
         },
         {
           "name": "Remix Icon",
           "description": "免费，精致统一的开源图标",
           "url": "https://remixicon.com",
-          "image": "/zwBlog/assets/images/nav/remix.jpg"
+          "image": ""
         },
         {
           "name": "Tabler Icons",
@@ -174,25 +169,25 @@
           "name": "Branding Style Guides",
           "description": "品牌视觉设计指南",
           "url": "https://brandingstyleguides.com",
-          "image": "/zwBlog/assets/images/nav/branding-style-guides.svg"
+          "image": ""
         },
         {
           "name": "Lordicon",
           "description": "动画图标库",
           "url": "https://lordicon.com/",
-          "image": "/zwBlog/assets/images/nav/lordicon.png"
+          "image": ""
         },
         {
           "name": "Iconscout",
           "description": "精美丰富，包含很多冷门类型",
           "url": "https://iconscout.com",
-          "image": "/zwBlog/assets/images/nav/iconscout.jpg"
+          "image": ""
         },
         {
           "name": "Emoji XD",
           "description": "线上Emoji百科全书，支持关键词搜索",
           "url": "https://emojixd.com",
-          "image": "/zwBlog/assets/images/nav/emojixd.jpg"
+          "image": ""
         },
         {
           "name": "Logobook",

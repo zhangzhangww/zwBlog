@@ -2,17 +2,7 @@
   <div class="title">
     <p> Hello! 👋🏾 Can I have a triple connection?</p>
   </div>
-  <!-- 视频 -->
-  <!-- <div class="img-list img-wrapper" v-if="none">
-    <div v-for="(item, navIndex) in urlList" :key="navIndex" class="img-box" style="margin-left: 40%;">
 
-      <video autoplay loop controls 
-        style="width: 40vw;height: 100%;display: inline-block;margin-bottom: 6%;">
-        <source :src="item.video" type="video/mp4">
-      </video>
-    </div>
-
-  </div> -->
   <div id="banner" v-if="!none">
     <div class="img-list img-wrapper" >
       <div v-for="(item, navIndex) in imgBoxes" :key="navIndex" class="img-box">
@@ -39,7 +29,6 @@
     </button>
     <button class="next btn" @click="change = !change" style="font-size: 1.4rem;font-weight: 600;">切换</button>
     <button v-if="none" class="next btn" @click="video" style="font-size: 1.4rem;font-weight: 600;">切换2</button>
-    <!-- <button  class="next btn" @click="tonone" style="font-size: 1.4rem;font-weight: 600;">hah</button> -->
     <button class="next btn" @click="handleClick('next')">
       <svg t="1686471404424" class="icon right" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
         p-id="2373" width="128" height="128">
@@ -54,10 +43,7 @@
 
 <script setup>
 import { ref, onMounted, computed, reactive } from 'vue';
-import axios from 'axios';
 const change = ref(false);
-const none = ref(false);
-const urlList = reactive([]);
 
 const imgBoxes = reactive([
   { title: 'One click triple connection1', img: 'bac1.png' },
@@ -70,14 +56,8 @@ const imgBoxes = reactive([
   { title: 'One click triple connection8', img: 'bac8.png' },
 ]);
 
-const video = () => {
-  console.log(111);
-  axios.get(' https://api.yujn.cn/api/kuaimao.php?type=json').then(res => {
-    urlList.push(res.data);
-    console.log(urlList);
-  })
-}
- video()
+
+
 
 const tonone = () => {
   none.value = !none.value;

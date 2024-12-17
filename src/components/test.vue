@@ -148,6 +148,7 @@ const submitMsg = async () => {
     background-color: #ffffff;
 
     .role-content {
+    min-height: calc(100% - 80px);
       padding: 20px;
       background-color: rgb(238, 240, 246);
       margin: 20px 10px 20px 20px;
