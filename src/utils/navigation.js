@@ -14,7 +14,7 @@
         ]
         },
         {
-        title:'百度',
+        title:'AI工具',
         icon:'/assets/images/nav/logonews.png',
         children:[
           {

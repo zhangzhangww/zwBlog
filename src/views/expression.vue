@@ -148,9 +148,15 @@ axios.get('https://cdn.jsdelivr.net/npm/iemotion-pic@latest/dist/7bu图床/HONKA
 	
 	display: flex;
 	height: 100%;
+	
 
 	.left {
 		width: 20%;
+		//隐藏滚动条
+		
+		
+
+		
 
 		.page-header {
 			position: sticky;
@@ -246,6 +252,7 @@ axios.get('https://cdn.jsdelivr.net/npm/iemotion-pic@latest/dist/7bu图床/HONKA
 		flex-wrap: wrap;
 		padding: 16px;
 		gap: 8px;
+		overflow: auto;
 
 		.item {
 			display: flex;

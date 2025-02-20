@@ -54,6 +54,11 @@ const routes = [
 				name: 'swiper',
 				component: () => import('@/views/swiper.vue'),
 			},
+			{
+				path: 'MapContainer',
+				name: 'MapContainer',
+				component: () => import('@/components/MapContainer.vue'),
+			},
 			
 		],
 	},

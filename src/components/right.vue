@@ -11,7 +11,7 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="https://www.yviii.com/" target="_blank" rel="tag" title="乙未起始页">
+                                    <a href="https://zhangzhangww.github.io/VitePress/" target="_blank" rel="tag" title="乙未起始页">
                                         <svg t="1730373902677" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="53577" width="38" height="38">
                                             <path
@@ -29,10 +29,10 @@
                                         </svg>
                                     </a>
                                     <br>
-                                    <span style="font-size:12px;">起始</span>
+                                    <span style="font-size:12px;">文档</span>
                                 </td>
                                 <td>
-                                    <a href="https://www.yivv.cc/" target="_blank" rel="tag" title="简单图床">
+                                    <a href="#" target="_blank" rel="tag" title="简单图床">
                                         <svg t="1731125410685" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="86561" width="38" height="38">
                                             <path
@@ -53,7 +53,7 @@
                                     <span style="font-size:12px;">图床</span>
                                 </td>
                                 <td>
-                                    <a href="http://18.163.28.123/" target="_blank" rel="tag" title="乙未影院">
+                                    <a href="#" target="_blank" rel="tag" title="乙未影院">
                                         <svg t="1731481094481" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="2593" width="38" height="38">
                                             <path
@@ -74,7 +74,7 @@
                                     <span style="font-size:12px;">影院</span>
                                 </td>
                                 <td>
-                                    <a href="https://api.yviii.com/" target="_blank" rel="tag" title="乙未API">
+                                    <a href="#" target="_blank" rel="tag" title="乙未API">
                                         <svg t="1731125518535" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="2058" width="38" height="38">
                                             <path

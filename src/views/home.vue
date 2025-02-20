@@ -114,6 +114,28 @@ const banner=(val)=>{
     }
 }
 
+
+
+// 创建 WebSocket 对象
+const socket = new WebSocket('wss://spark-api.xf-yun.com/v1.1/chat'); // 使用一个 WebSocket 服务器进行测试
+
+// 设置 WebSocket 连接打开时的回调函数
+socket.onopen = function() {
+   console.log('WebSocket 连接已打开');
+};
+// 设置 WebSocket 接收到消息时的回调函数
+socket.onmessage = function(event) {
+   console.log('接收到消息：', event.data);
+};
+// 设置 WebSocket 连接关闭时的回调函数
+socket.onclose = function() {
+   console.log('WebSocket 连接已关闭');
+};
+// 设置 WebSocket 连接发生错误时的回调函数
+socket.onerror = function(error) {
+   console.error('WebSocket 连接发生错误：', error);
+};
+
 </script>
 
 <style scoped lang="scss">

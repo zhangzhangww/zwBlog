@@ -1,5 +1,6 @@
 <template>
-  <div class="title">
+  <div class="swip">
+    <div class="title">
     <p> Hello! 👋🏾 Can I have a triple connection?</p>
   </div>
 
@@ -8,8 +9,8 @@
       <div v-for="(item, navIndex) in imgBoxes" :key="navIndex" class="img-box">
         <div class="info" :class="navIndex == -index + 2 ? 'active' : ''">
         </div>
-        <!-- <img v-if="!change" :src="`https://api.yviii.com/img/comic?a=${item.img}`" alt=""> -->
-        <img v-if="!change" src="@/assets/images/bac1.png" alt="">
+        <img v-if="!change" :src="`https://api.yviii.com/img/comic?a=${item.img}`" alt="">
+        <!-- <img v-if="!change" src="@/assets/images/bac1.png" alt=""> -->
         <video autoplay loop controls v-if="change">
           <source :src="`https://api.yviii.com/video/suiji.php?a=${item.img}`" type="video/mp4">
           <!-- <source  :src="` http://api.yujn.cn/api/xjj.php?type=video`" type="video/mp4"> -->
@@ -39,6 +40,8 @@
     </button>
 
   </div>
+  </div>
+  
 </template>
 
 <script setup>
@@ -139,4 +142,9 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @import url(@/assets/styles/banner.css);
+.swip{
+  width: 100vw;
+  height: calc(100vh - 750px);
+  overflow: hidden;
+}
 </style>

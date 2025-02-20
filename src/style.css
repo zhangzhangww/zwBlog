@@ -1,7 +1,7 @@
 /** * Theme Name: spimes */
 #app {
     height: 100vh;
-    overflow: auto;
+    /* overflow: hidden; */
 }
 /* 复位css */
 

@@ -12,22 +12,12 @@
   }
   
   * {
-    padding: 0;
-    margin: 0;
+   
     font-family: Millik, Arial, sans-serif;
     font-size: 62.5%;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
+
   }
-  body {
-    background: #fff;
-    background-image: url(./asset/image/grid.svg);
-    background-repeat: repeat;
-    background-size: 300px 300px;
-  }
+
   .title {
     position: absolute;
     left: 50%;
@@ -67,11 +57,11 @@
             position: relative;
             cursor: pointer;
             transition: all 0.6s;
-            &:hover img, &:hover video {
+            /* &:hover img, &:hover video {
                 transform: scale(1.04);
                 z-index: 9999;
             }
-  
+   */
   
             .info {
                 position: absolute;
@@ -89,7 +79,7 @@
             }
             img,video {
                 width: var(--post-size);
-                height: 100%;
+                height: 70%;
                 object-position: center;
                 object-fit: cover;
                 transition: all 0.6s ease-in-out;

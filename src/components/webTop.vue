@@ -161,8 +161,15 @@
                                     弹幕墙
                                 </router-link>
                             </li>
+                            <li class="nav-s" >
+                                <router-link to="/MapContainer" class="top-icon" activeClass="active">
+                                    <img class="img" src="@/assets/images/icon/wancan.svg" alt="">
+                                    地图测试
+                                </router-link>
+                            </li>
 
                             <li class="drop-down">
+                                <!-- <i class="msg_remind" style="display: inline;"></i> -->
                                 <div class="top-icon" style="line-height: 50px;">
                                     <img class="img" src="@/assets/images/icon/milu.svg" alt="">小工具
                                 </div>
@@ -180,23 +187,7 @@
                                 </ul>
                             </li>
 
-                            <li class="drop-down">
-                                <i class="msg_remind" style="display: inline;"></i>
-                                <a href="#">
-                                    <img class="img" src="@/assets/images/icon/snow.svg" alt="">
-                                </a>
-                                <ul class="aui-nav-dow">
-                                    <li>
-                                        <a href="" title="有话要说">有话要说</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="友情链接">友情链接</a>
-                                    </li>
-                                    <li>
-                                        <a href="" title="关于本站">关于本站</a>
-                                    </li>
-                                </ul>
-                            </li>
+                          
                         </ul>
                         <div id="sidebar-toggle" class="sidebar-toggle">
                             <span></span>
@@ -211,17 +202,17 @@
                             开往
                         </a> -->
                         &nbsp;&nbsp;
-                        <router-link to="/swiper" class="top-icon">
+                        <router-link to="/swiper" class="top-icon right">
                             <img class="img" src="@/assets/images/icon/mei.svg" alt="">
                             照片墙
                         </router-link>
                         &nbsp;&nbsp;
-                        <router-link to="/family" class="top-icon">
+                        <router-link to="/family" class="top-icon right">
                             <img class="img" src="@/assets/images/icon/tree.svg" alt="">
                             我们
                         </router-link>
                         &nbsp;&nbsp;
-                        <router-link to="/about" class="top-icon">
+                        <router-link to="/about" class="top-icon right">
                             <img class="img" src="@/assets/images/icon/wazi.svg" alt="">
                             关于
                         </router-link>
@@ -311,17 +302,19 @@ window.addEventListener('scroll', () => {
     object-fit: cover;
 }
 
-/* .top-icon {
+.top-icon {
     display: flex;
     align-items: center;
-
-
-} */
+    /* margin-right: 12px; */
+}
 
 .img {
     margin-right: 4px;
     width: 16px;
     height: 16px;
     vertical-align: middle;
+}
+.right{
+    margin-right: 16px;
 }
 </style>

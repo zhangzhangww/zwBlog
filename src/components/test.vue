@@ -1,10 +1,12 @@
 <template>
   <div class="ai-icon" >
-    <div class="ai" @click="aichat = !aichat">
-      <img v-if="!aichat" src="@/assets/images/aiIcon.png" alt="">
-      <span v-if="aichat">返回</span>
+    <div v-if="!aichat" class="ai" @click="goChat">
+      <img  src="@/assets/images/aiIcon.png" alt="">
     </div>
-    <div class="ai" @click="catTop">置顶</div>
+    <div  v-if="aichat" class="ai aihover" @click="goChat">
+      <span>返回</span>
+    </div>
+    <!-- <div v-if="!aichat" class="ai aihover" @click="catTop">置顶</div> -->
   </div>
 
   <div class="content-chat" v-show="aichat">
@@ -60,12 +62,17 @@ onMounted(() => {
   nextTick(() => {
         document.documentElement.scrollTop = document.body.scrollTop = 0
       })
-    }
+  }
 // 滚动到最底部
 const scroll = () => {
   nextTick(() => {
     msgDom.value.scrollTop = msgDom.value.scrollHeight
   })
+}
+const goChat = () => {
+  aichat.value = !aichat.value
+  scroll()
+  
 }
 
 // 发送消息
@@ -108,11 +115,12 @@ const submitMsg = async () => {
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 
-  &:nth-child(2):hover {
+
+
+  }
+  .aihover:hover {
     background-color: #6740FD;
     color: #fff;
-  }
-
   }
   
 }
@@ -128,10 +136,10 @@ const submitMsg = async () => {
 .content-chat {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 999;
-  background-color: rgb(0, 0, 0, 0.5);
+  background-color: rgb(219, 222, 255);
 
 
 
