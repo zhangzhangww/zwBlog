@@ -58,7 +58,7 @@
 
 @font-face {
     font-family: "HarmonyOS_Sans_SC_Medium";
-    src: url(@/assets/fonts/HarmonyOS_Sans_SC_Regular.ttf);
+    src: url(@/assets/fonts/HarmonyOS_Sans_SC_Medium.subset.woff2) format("woff2");
 }
 @font-face {
 	font-family: Millik;

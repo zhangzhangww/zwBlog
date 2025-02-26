@@ -11,13 +11,13 @@
                             <div class="sp_index__banner">
                                 <div class="swiper-container">
                                     <div class="swiper-wrapper" >
-                                        <div class="swiper-slide" v-for="item,index in count1" :key="item" :style="`transform: translate(${trans}%);`" style="transition: all 0.5s ease 0s;">
-                                            <a target="_blank" class="item block-fea small-slider-img" href="https://blog.csdn.net/aaaa_aaab/article/details/140944939?spm=1001.2014.3001.5502"
+                                        <div class="swiper-slide" v-for="item in count1" :key="item" :style="`transform: translate(${trans}%);`" style="transition: all 0.5s ease 0s;">
+                                            <a target="_blank" class="item block-fea small-slider-img" :href="item.link"
                                                 style="background-image: url(https://api.yviii.com/img/style);">
                                                 <div class="overlay-1"></div>
                                                 <div class="title">
                                                     <span class="badge arc_v2">推荐</span>
-                                                   解决npm安装慢问题{{ index }}
+                                                 {{ item.title }}
                                                 </div>
                                             </a>
                                         </div>
@@ -91,13 +91,17 @@ import Right from '../components/right.vue';
 import { ref } from 'vue';
 const trans=ref(0)
 const count=ref(0)
-const count1=ref(3)
+const count1=ref([
+    {id:1,title:'解决npm安装慢问题',description:'测试1',link:'https://blog.csdn.net/aaaa_aaab/article/details/140944939?spm=1001.2014.3001.5502'},
+    {id:2,title:'【DeepSeek】本地部署,保姆级教程',description:'测试1',link:'https://blog.csdn.net/aaaa_aaab/article/details/145605273?spm=1001.2014.3001.5501'},
+    {id:3,title:'前端学习路线',description:'测试1',link:'https://blog.csdn.net/aaaa_aaab/article/details/144271312?spm=1001.2014.3001.5502'},
+])
 const banner=(val)=>{
     
     if(val===1){
         count.value++
         console.log(count1.value)
-        if(count.value<=count1.value-1){
+        if(count.value<=count1.value.length-1){
             trans.value-=100
         }else{
             count.value=0
@@ -106,7 +110,7 @@ const banner=(val)=>{
     }else if(val===-1){
         count.value--
         trans.value+=100
-        if(count.value<=0){
+        if(count.value.length<=0){
             trans.value=0
             count.value=0
         }
@@ -116,25 +120,25 @@ const banner=(val)=>{
 
 
 
-// 创建 WebSocket 对象
-const socket = new WebSocket('wss://spark-api.xf-yun.com/v1.1/chat'); // 使用一个 WebSocket 服务器进行测试
+// // 创建 WebSocket 对象
+// const socket = new WebSocket('wss://spark-api.xf-yun.com/v1.1/chat'); // 使用一个 WebSocket 服务器进行测试
 
-// 设置 WebSocket 连接打开时的回调函数
-socket.onopen = function() {
-   console.log('WebSocket 连接已打开');
-};
-// 设置 WebSocket 接收到消息时的回调函数
-socket.onmessage = function(event) {
-   console.log('接收到消息：', event.data);
-};
-// 设置 WebSocket 连接关闭时的回调函数
-socket.onclose = function() {
-   console.log('WebSocket 连接已关闭');
-};
-// 设置 WebSocket 连接发生错误时的回调函数
-socket.onerror = function(error) {
-   console.error('WebSocket 连接发生错误：', error);
-};
+// // 设置 WebSocket 连接打开时的回调函数
+// socket.onopen = function() {
+//    console.log('WebSocket 连接已打开');
+// };
+// // 设置 WebSocket 接收到消息时的回调函数
+// socket.onmessage = function(event) {
+//    console.log('接收到消息：', event.data);
+// };
+// // 设置 WebSocket 连接关闭时的回调函数
+// socket.onclose = function() {
+//    console.log('WebSocket 连接已关闭');
+// };
+// // 设置 WebSocket 连接发生错误时的回调函数
+// socket.onerror = function(error) {
+//    console.error('WebSocket 连接发生错误：', error);
+// };
 
 </script>
 

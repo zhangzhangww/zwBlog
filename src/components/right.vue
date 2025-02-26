@@ -11,7 +11,7 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="https://zhangzhangww.github.io/VitePress/" target="_blank" rel="tag" title="乙未起始页">
+                                    <a href="https://blog.csdn.net/aaaa_aaab?type=blog" target="_blank" rel="tag" title="博客">
                                         <svg t="1730373902677" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="53577" width="38" height="38">
                                             <path
@@ -29,10 +29,10 @@
                                         </svg>
                                     </a>
                                     <br>
-                                    <span style="font-size:12px;">文档</span>
+                                    <span style="font-size:12px;">我的博客</span>
                                 </td>
                                 <td>
-                                    <a href="#" target="_blank" rel="tag" title="简单图床">
+                                    <a href="https://zhangzhangww.github.io/VitePress/" target="_blank" rel="tag" title="简单图床">
                                         <svg t="1731125410685" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="86561" width="38" height="38">
                                             <path
@@ -50,10 +50,10 @@
                                         </svg>
                                     </a>
                                     <br>
-                                    <span style="font-size:12px;">图床</span>
+                                    <span style="font-size:12px;">文档</span>
                                 </td>
                                 <td>
-                                    <a href="#" target="_blank" rel="tag" title="乙未影院">
+                                    <a href="https://www.zcool.com.cn/u/25226983" target="_blank" rel="tag" title="视觉作品">
                                         <svg t="1731481094481" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="2593" width="38" height="38">
                                             <path
@@ -71,10 +71,10 @@
                                         </svg>
                                     </a>
                                     <br>
-                                    <span style="font-size:12px;">影院</span>
+                                    <span style="font-size:12px;">视觉作品</span>
                                 </td>
                                 <td>
-                                    <a href="#" target="_blank" rel="tag" title="乙未API">
+                                    <a href="https://www.yuque.com/street-dds1m/vhzzyi/bxcq9w6bw7otxlpw" target="_blank" rel="tag" title="语雀">
                                         <svg t="1731125518535" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="2058" width="38" height="38">
                                             <path
@@ -92,7 +92,7 @@
                                         </svg>
                                     </a>
                                     <br>
-                                    <span style="font-size:12px;">API</span>
+                                    <span style="font-size:12px;">日记</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -151,7 +151,7 @@
             <div class="items" id="tag-cloud">
                 <div class="item ">
                     <div class="wall-item">
-                        <a href="https://www.yvii.cn/tag/%E6%97%A5%E8%AE%B0/" rel="tag">
+                        <a href="#" rel="tag">
                             <h2>
                                 <i class="clr_orange">#</i>
                                 日记
@@ -161,7 +161,7 @@
                 </div>
                 <div class="item ">
                     <div class="wall-item">
-                        <a href="https://www.yvii.cn/tag/%E8%BD%A8%E8%BF%B9/" rel="tag">
+                        <a href="#" rel="tag">
                             <h2>
                                 <i class="clr_orange">#</i>
                                 轨迹

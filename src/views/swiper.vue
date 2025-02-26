@@ -9,8 +9,8 @@
       <div v-for="(item, navIndex) in imgBoxes" :key="navIndex" class="img-box">
         <div class="info" :class="navIndex == -index + 2 ? 'active' : ''">
         </div>
-        <img v-if="!change" :src="`https://api.yviii.com/img/comic?a=${item.img}`" alt="">
-        <!-- <img v-if="!change" src="@/assets/images/bac1.png" alt=""> -->
+        <!-- <img v-if="!change" :src="`https://api.yviii.com/img/comic?a=${item.img}`" alt=""> -->
+        <img v-if="!change" :src="`${item.img}`" alt="">
         <video autoplay loop controls v-if="change">
           <source :src="`https://api.yviii.com/video/suiji.php?a=${item.img}`" type="video/mp4">
           <!-- <source  :src="` http://api.yujn.cn/api/xjj.php?type=video`" type="video/mp4"> -->
@@ -29,7 +29,6 @@
       </svg>
     </button>
     <button class="next btn" @click="change = !change" style="font-size: 1.4rem;font-weight: 600;">切换</button>
-    <button v-if="none" class="next btn" @click="video" style="font-size: 1.4rem;font-weight: 600;">切换2</button>
     <button class="next btn" @click="handleClick('next')">
       <svg t="1686471404424" class="icon right" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
         p-id="2373" width="128" height="128">
@@ -49,14 +48,14 @@ import { ref, onMounted, computed, reactive } from 'vue';
 const change = ref(false);
 
 const imgBoxes = reactive([
-  { title: 'One click triple connection1', img: 'bac1.png' },
-  { title: 'One click triple connection2', img: 'bac2.png' },
-  { title: 'One click triple connection3', img: 'bac3.png' },
-  { title: 'One click triple connection4', img: 'bac4.png' },
-  { title: 'One click triple connection5', img: 'bac5.png' },
-  { title: 'One click triple connection6', img: 'bac6.png' },
-  { title: 'One click triple connection7', img: 'bac7.png' },
-  { title: 'One click triple connection8', img: 'bac8.png' },
+  { title: 'One click triple connection1', img: 'src/assets/images/bac1.png' },
+  { title: 'One click triple connection2', img: 'src/assets/images/bac3.png' },
+  { title: 'One click triple connection3', img: 'src/assets/images/bac2.png' },
+  { title: 'One click triple connection4', img: 'src/assets/images/bac1.png' },
+  { title: 'One click triple connection5', img: 'src/assets/images/bac2.png' },
+  { title: 'One click triple connection6', img: 'src/assets/images/bac3.png' },
+  { title: 'One click triple connection7', img: 'src/assets/images/bac2.png' },
+  { title: 'One click triple connection8', img: 'src/assets/images/bac1.png' },
 ]);
 
 
