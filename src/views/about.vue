@@ -16,6 +16,7 @@
 	                <li>扣扣：2538815974</li>
 	                <li>微信：ssxpy2538</li>
 	                <li>邮箱：2538815974@qq.com</li>
+					
 	            </ul>
 	            <div class="profile__title">兴趣爱好</div>
 	            <div class="base-info" style="text-align:justify;">
