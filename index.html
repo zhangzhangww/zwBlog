@@ -1,20 +1,31 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="zwBlog/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://fastly.jsdelivr.net/gh/zhangzhangww/live2d@master/loads.js"></script>
-    <title>zyxBlog</title>
-    <script type="module" crossorigin src="/zwBlog/assets/index-DDyrEi58.js"></script>
-    <link rel="stylesheet" crossorigin href="/zwBlog/assets/index-BKS1K9Ek.css">
-  </head>
-  <body>
-    <div id="app"></div>
-  </body>
-  <style>
-    body {
-			cursor: url('/zwBlog/assets/normal-Rtl_i-ON.cur'), default;
-		}
-  </style>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/zwBlog/assets/dog2-CMZ_cVOU.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <script src="https://fastly.jsdelivr.net/gh/zhangzhangww/live2d@master/loads.js"></script> -->
+  <title>南柯</title>
+  <script type="module" crossorigin src="/zwBlog/assets/index-COSkOSiD.js"></script>
+  <link rel="stylesheet" crossorigin href="/zwBlog/assets/index-B1I-3NfX.css">
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+<style>
+  body {
+    cursor: url('/zwBlog/assets/normal-Rtl_i-ON.cur'), default;
+  }
+</style>
+<script>
+  let titleTime, OriginTitile = document.title;
+  document.addEventListener("visibilitychange", (function () {
+    document.hidden ? (document.title = "w(ﾟДﾟ)w 别走！来玩啊", clearTimeout(titleTime)) : (document.title = "♪(^∇^*)哇！你终于回来啦！", titleTime = setTimeout((function () {
+      document.title = OriginTitile
+    }), 2e3))
+  }));
+</script>
+
 </html>
