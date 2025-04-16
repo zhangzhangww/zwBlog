@@ -51,6 +51,7 @@ const msgValue = ref("")
 let ttsRecorder = new TTSRecorder()
 const msgList = ref([])
 let msgDom = ref(null)
+
  
 onMounted(() => {
   msgDom.value = document.getElementById("role-content")
@@ -71,6 +72,12 @@ const scroll = () => {
 }
 const goChat = () => {
   aichat.value = !aichat.value
+  //给body添加样式，使其不能滚动
+  if (aichat.value) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = 'auto'
+    }
   scroll()
   
 }
@@ -100,7 +107,7 @@ const submitMsg = async () => {
   flex-direction: column;
   position: fixed;
   right: 4%;
-  bottom: 20%;
+  bottom: 12%;
   z-index: 9999;
  
   .ai{
@@ -139,7 +146,8 @@ const submitMsg = async () => {
   position: fixed;
   top: 0;
   z-index: 999;
-  background-color: rgb(219, 222, 255);
+  background-color: rgba(0, 0, 0, 0.7);
+  // background-color: rgb(219, 222, 255);
 
 
 

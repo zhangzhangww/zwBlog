@@ -7,7 +7,7 @@
           <div v-for="(item,index) in navList" :key="index">
               
               <a :href="'#' + index" class="mulu-item" :class="index==navIndex?'active':''"  @click.prevent="clickNav(index,item)" >
-                  <img src="../assets/images/icon/search.svg" alt="">
+                
                   {{item.title}}
               </a>
           </div>

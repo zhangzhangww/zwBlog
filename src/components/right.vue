@@ -74,7 +74,7 @@
                                     <span style="font-size:12px;">视觉作品</span>
                                 </td>
                                 <td>
-                                    <a href="https://www.yuque.com/street-dds1m/vhzzyi/bxcq9w6bw7otxlpw" target="_blank" rel="tag" title="语雀">
+                                    <a href="https://hnqx.online" target="_blank" rel="tag" title="语雀">
                                         <svg t="1731125518535" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                             xmlns="http://www.w3.org/2000/svg" p-id="2058" width="38" height="38">
                                             <path
@@ -92,7 +92,7 @@
                                         </svg>
                                     </a>
                                     <br>
-                                    <span style="font-size:12px;">日记</span>
+                                    <span style="font-size:12px;">AI对话</span>
                                 </td>
                             </tr>
                         </tbody>

@@ -18,10 +18,10 @@
         icon:'/assets/images/nav/logonews.png',
         children:[
           {
-          name:'lkonate',
-          description:'搜索引擎',
+          name:'豆包',
+          description:'豆包是字节跳动公司开发的智能聊天机器人，可以回答各种问题。无论是知识学习、生活琐事还是创意灵感，豆包都能提供帮助和启发。',
           image:'',
-          url:'http://www.baidu.com'
+          url:'https://www.doubao.com/chat/2168809143042'
           },
     
         ]

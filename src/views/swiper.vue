@@ -10,7 +10,7 @@
         <div class="info" :class="navIndex == -index + 2 ? 'active' : ''">
         </div>
         <!-- <img v-if="!change" :src="`https://api.yviii.com/img/comic?a=${item.img}`" alt=""> -->
-        <img v-if="!change" :src="`${item.img}`" alt="">
+        <img v-if="!change" :src="`/zwBlog/src/assets/images/${item.img}`" alt="">
         <video autoplay loop controls v-if="change">
           <source :src="`https://api.yviii.com/video/suiji.php?a=${item.img}`" type="video/mp4">
           <!-- <source  :src="` http://api.yujn.cn/api/xjj.php?type=video`" type="video/mp4"> -->
@@ -48,14 +48,14 @@ import { ref, onMounted, computed, reactive } from 'vue';
 const change = ref(false);
 
 const imgBoxes = reactive([
-  { title: 'One click triple connection1', img: 'src/assets/images/bac1.png' },
-  { title: 'One click triple connection2', img: 'src/assets/images/bac3.png' },
-  { title: 'One click triple connection3', img: 'src/assets/images/bac2.png' },
-  { title: 'One click triple connection4', img: 'src/assets/images/bac1.png' },
-  { title: 'One click triple connection5', img: 'src/assets/images/bac2.png' },
-  { title: 'One click triple connection6', img: 'src/assets/images/bac3.png' },
-  { title: 'One click triple connection7', img: 'src/assets/images/bac2.png' },
-  { title: 'One click triple connection8', img: 'src/assets/images/bac1.png' },
+  { title: 'One click triple connection1', img: 'bac1.png' },
+  { title: 'One click triple connection2', img: 'bac3.png' },
+  { title: 'One click triple connection3', img: 'bac2.png' },
+  { title: 'One click triple connection4', img: 'bac1.png' },
+  { title: 'One click triple connection5', img: 'bac2.png' },
+  { title: 'One click triple connection6', img: 'bac3.png' },
+  { title: 'One click triple connection7', img: 'bac2.png' },
+  { title: 'One click triple connection8', img: 'bac1.png' },
 ]);
 
 

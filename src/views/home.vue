@@ -89,6 +89,7 @@ import articleList from '@/utils/article.js';
 import articleList1 from '../utils/ceshi';
 import Right from '../components/right.vue';
 import { ref } from 'vue';
+
 const trans=ref(0)
 const count=ref(0)
 const count1=ref([
@@ -100,7 +101,6 @@ const banner=(val)=>{
     
     if(val===1){
         count.value++
-        console.log(count1.value)
         if(count.value<=count1.value.length-1){
             trans.value-=100
         }else{
