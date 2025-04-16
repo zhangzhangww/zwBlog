@@ -7,10 +7,6 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    copy: typeof import('./src/components/test copy.vue')['default']
-    ElFormItem: typeof import('element-plus/es')['ElFormItem']
-    ElOption: typeof import('element-plus/es')['ElOption']
-    ElSelect: typeof import('element-plus/es')['ElSelect']
     MapContainer: typeof import('./src/components/MapContainer.vue')['default']
     Right: typeof import('./src/components/right.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
